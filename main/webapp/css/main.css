@@ -65,7 +65,7 @@ box-sizing: border-box; /*que los elementos lleven incluidos el margen y el padd
 
 html {
 	background-image: url(/images/generalback.jpg);
-	background-color: gray;
+	background-color: #ba6508;
 	background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

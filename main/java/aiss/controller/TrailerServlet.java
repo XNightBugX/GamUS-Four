@@ -22,19 +22,19 @@ public class TrailerServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sesion = request.getSession();
-		sesion.setAttribute("servlet", "trailer");
-		String query = (String) sesion.getAttribute("name");
+		HttpSession session = request.getSession();
+		session.setAttribute("servlet", "trailer");
+		String query = (String) session.getAttribute("name");
 	    YoutubeResource video = new YoutubeResource();
 	    Youtube results = video.getTrailer(query);			
 	    	
 	    if(results.getItems().isEmpty()) {
 	    	log.log(Level.INFO,"TrailerServlet: The search is empty");
-	    	sesion.setAttribute("videos", "QH2-TGUlwu4");
+	    	session.setAttribute("videos", "QH2-TGUlwu4");
 	    	request.getRequestDispatcher("/trailer.jsp").forward(request, response);
 	    }else {
 	    	log.log(Level.INFO,"TrailerServlet: The video ID is: " + results.getItems().get(0).getId().getVideoId().toString());
-	    	sesion.setAttribute("videos", results.getItems().get(0).getId().getVideoId().toString());
+	    	session.setAttribute("videos", results.getItems().get(0).getId().getVideoId().toString());
 	    	request.getRequestDispatcher("/trailer.jsp").forward(request, response);
 	    }
 	}

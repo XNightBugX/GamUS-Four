@@ -21,13 +21,13 @@ public class RedirectControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String s = (String) request.getSession().getAttribute("servlet");
 	if(s.equals("main")) {
-		log.log(Level.INFO,"Redirectcontrol: redirecting to Main");
+		log.log(Level.INFO,"RedirectControl: redirecting to Main");
 		response.sendRedirect("/main.jsp");
 	}else if(s.equals("trailer")) {
-		log.log(Level.INFO,"Redirectcontrol: redirecting to Trailer");
+		log.log(Level.INFO,"RedirectControl: redirecting to Trailer");
 		response.sendRedirect("/trailer.jsp");
 	}else if(s.equals("synopsis")) {
-		log.log(Level.INFO,"Redirectcontrol: redirecting to Synopsis");
+		log.log(Level.INFO,"RedirectControl: redirecting to Synopsis");
 		response.sendRedirect("/synopsis.jsp");
 	}else {
 		response.sendRedirect("/error.jsp");

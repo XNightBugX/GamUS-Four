@@ -20,18 +20,18 @@ public class SynopsisServlet extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sesion  = request.getSession();
-		String id = (String)sesion.getAttribute("id");
-		sesion.setAttribute("servlet", "synopsis");
+		HttpSession session  = request.getSession();
+		String id = (String)session.getAttribute("id");
+		session.setAttribute("servlet", "synopsis");
 		IGDBResource igdb = new IGDBResource();
 		List<Game> igdbResults = igdb.getGameId(id);
 	    if(igdbResults!=null) {
 			if (igdbResults.get(0).getEsrb()==null) {
-				sesion.setAttribute("synopsis", "The synopsis doesn't exist");
+				session.setAttribute("synopsis", "The synopsis doesn't exist");
 			} else if(igdbResults.get(0).getEsrb().getSynopsis()==null || igdbResults.get(0).getEsrb().getSynopsis().equals("")) {
-				sesion.setAttribute("synopsis", "The synopsis doesn't exist");
+				session.setAttribute("synopsis", "The synopsis doesn't exist");
 			}else {
-				sesion.setAttribute("synopsis", igdbResults.get(0).getEsrb().getSynopsis());
+				session.setAttribute("synopsis", igdbResults.get(0).getEsrb().getSynopsis());
 			}
 	    }
 		request.getRequestDispatcher("/synopsis.jsp").forward(request, response);

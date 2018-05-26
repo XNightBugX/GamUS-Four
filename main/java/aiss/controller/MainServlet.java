@@ -23,52 +23,52 @@ public class MainServlet extends HttpServlet {
         super();
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	HttpSession sesion = request.getSession();
-    	eliminaSesion(sesion);
+    	HttpSession session = request.getSession();
+    	eliminaSession(session);
     	String id = request.getParameter("id");
-    	sesion.setAttribute("servlet", "main");
+    	session.setAttribute("servlet", "main");
     	log.log(Level.INFO, "MainServlet: The search game`s ID is: " + id);
 		IGDBResource igdb = new IGDBResource();
 		List<Game> igdbResults = igdb.getGameId(id);
 		RequestDispatcher rd = null;
 			if(!(igdbResults == null)) {
-		        sesion.setAttribute("name", igdbResults.get(0).getName());
-		        sesion.setAttribute("GAME", igdbResults.get(0).getName().replace(" ", "-"));
-		        sesion.setAttribute("amazon", igdbResults.get(0).getName().replace(" ", "+"));
-		        sesion.setAttribute("steam", igdbResults.get(0).getName().replace(" ", "+"));
-		        sesion.setAttribute("g2a", igdbResults.get(0).getName().replace(" ", "+"));
+		        session.setAttribute("name", igdbResults.get(0).getName());
+		        session.setAttribute("GAME", igdbResults.get(0).getName().replace(" ", "-"));
+		        session.setAttribute("amazon", igdbResults.get(0).getName().replace(" ", "+"));
+		        session.setAttribute("steam", igdbResults.get(0).getName().replace(" ", "+"));
+		        session.setAttribute("g2a", igdbResults.get(0).getName().replace(" ", "+"));
 				if(igdbResults.get(0).getCover()==null) {
-				sesion.setAttribute("img", "//i.imgur.com/aJBVL2V.png");	
+				session.setAttribute("img", "//i.imgur.com/aJBVL2V.png");	
 
 				}else {
-				sesion.setAttribute("img", igdbResults.get(0).getCover().getUrl().replace("thumb", "cover_big"));
+				session.setAttribute("img", igdbResults.get(0).getCover().getUrl().replace("thumb", "cover_big"));
 				}
 				if(igdbResults.get(0).getPegi()==null) {
-				sesion.setAttribute("pegi", "No pegi");
+				session.setAttribute("pegi", "No pegi");
 				}else {
 					Integer pegii = igdbResults.get(0).getPegi().getRating();
-					sesion.setAttribute("pegi", Game.createPegi(pegii));
-					sesion.setAttribute("pegi2", igdbResults.get(0).getPegi().getRating());
+					session.setAttribute("pegi", Game.createPegi(pegii));
+					session.setAttribute("pegi2", igdbResults.get(0).getPegi().getRating());
 				}
 				if(igdbResults.get(0).getGenres()==null) {
-					sesion.setAttribute("genres", "No genre");
+					session.setAttribute("genres", "No genre");
 				}else {
 					List<Integer> generos = igdbResults.get(0).getGenres();
-					sesion.setAttribute("genres", Game.createGenre(generos));
-					sesion.setAttribute("recomm", generos);
+					session.setAttribute("genres", Game.createGenre(generos));
+					session.setAttribute("recomm", generos);
 				}
 				if(igdbResults.get(0).getPlatforms()==null) {
-					sesion.setAttribute("platform", "No platforms");
+					session.setAttribute("platform", "No platforms");
 				}else {
 					List<Integer> plataformas = igdbResults.get(0).getPlatforms();
-					sesion.setAttribute("platform", Game.createPlatform(plataformas));
+					session.setAttribute("platform", Game.createPlatform(plataformas));
 				}
 				if(igdbResults.get(0).getRating()==null) {
-					sesion.setAttribute("rating", "No rating");
+					session.setAttribute("rating", "No rating");
 				}else {
-					sesion.setAttribute("rating", igdbResults.get(0).getRating().intValue());
+					session.setAttribute("rating", igdbResults.get(0).getRating().intValue());
 				}
-				sesion.setAttribute("id", id);
+				session.setAttribute("id", id);
 				rd = request.getRequestDispatcher("/main.jsp");
 			}else {
 				log.log(Level.SEVERE, "MainServlet: An error ocurred");
@@ -80,20 +80,20 @@ public class MainServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-	private void eliminaSesion(HttpSession sesion) {
-		sesion.removeAttribute("name");
-		sesion.removeAttribute("GAME");
-		sesion.removeAttribute("amazon");
-		sesion.removeAttribute("steam");
-		sesion.removeAttribute("g2a");
-		sesion.removeAttribute("img");
-		sesion.removeAttribute("pegi");
-		sesion.removeAttribute("pegi2");
-		sesion.removeAttribute("genres");
-		sesion.removeAttribute("recomm");
-		sesion.removeAttribute("platform");
-		sesion.removeAttribute("rating");
-		sesion.removeAttribute("synopsis");
-		sesion.removeAttribute("id");
+	private void eliminaSession(HttpSession session) {
+		session.removeAttribute("name");
+		session.removeAttribute("GAME");
+		session.removeAttribute("amazon");
+		session.removeAttribute("steam");
+		session.removeAttribute("g2a");
+		session.removeAttribute("img");
+		session.removeAttribute("pegi");
+		session.removeAttribute("pegi2");
+		session.removeAttribute("genres");
+		session.removeAttribute("recomm");
+		session.removeAttribute("platform");
+		session.removeAttribute("rating");
+		session.removeAttribute("synopsis");
+		session.removeAttribute("id");
 	}
 }
