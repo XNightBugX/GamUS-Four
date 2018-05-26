@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Horizon'; /*a name to be used later*/
+    src: url('/fonts/horizon.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Poor'; /*a name to be used later*/
+    src: url('/fonts/Poorich.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Californian FB'; /*a name to be used later*/
+    src: url('/fonts/CALIFR.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Zelda'; /*a name to be used later*/
+    src: url('/fonts/HyliaSerifBeta.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Symbols'; /*a name to be used later*/
+    src: url('/fonts/HylianSymbols.ttf'); /*URL to font*/
+}
+
+* {
+box-sizing: border-box; /*que los elementos lleven incluidos el margen y el padding*/
+}
+	/*
+			
+			@media only screen and (min-width: 300px) {
+				.col-tab-1 {width: 10%;}
+				.col-tab-2 {width: 20%;}
+				.col-tab-3 {width: 30%;}
+				.col-tab-4 {width: 40%;}
+				.col-tab-5 {width: 50%;}
+				.col-tab-6 {width: 60%;}
+				.col-tab-7 {width: 70%;}
+				.col-tab-8 {width: 80%;}
+				.col-tab-9 {width: 90%;}
+				.col-tab-10 {width: 100%;}
+			}
+
+			@media only screen and (min-width: 780px) {
+				.col-1 {width: 10%;}
+				.col-2 {width: 20%;}
+				.col-3 {width: 30%;}
+				.col-4 {width: 40%;}
+				.col-5 {width: 50%;}
+				.col-6 {width: 60%;}
+				.col-7 {width: 70%;}
+				.col-8 {width: 80%;}
+				.col-9 {width: 90%;}
+				.col-10 {width: 100%;}
+			}*/
+
+.column {
+	float: left;
+	width: 32.5%;
+	padding: 10px;
+	min-height: 100%;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+html {
+	background-image: url(/images/generalback.jpg);
+	background-color: gray;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-height: 100%;
+}
+
+#left {
+	
+	display: inline-block;
+	min-height: 821px;
+	max-height: 2000px;
+	margin-top: 5%;
+	border: 3px solid transparent;
+	border-radius: 20px;
+	margin-left: 2px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 30px 0 black;
+}
+
+#right {
+	display: inline-block;
+	text-align: center;
+	max-height: 2000px;
+	margin-top:5%;
+	border: 3px transparent;
+	border-radius: 20px;
+	min-height: 821px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 30px 0 black;
+}
+
+#center {
+	display: inline-block;
+	text-align: center;
+	max-height: 2000px;
+	margin-top: 5%;
+	border: 3px transparent;
+	border-radius: 20px;
+	min-height: 821px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 30px 0 black;
+}
+
+#image {
+	margin-top: 30px;
+}
+#image, #logo, #post {
+	text-align: center;
+}
+
+
+
+#physical, #digital {
+	vertical-align:middle;
+	padding-top: 40px;
+}
+
+#g_td {
+	padding-top: 30px;
+}
+
+#digital_games, #physical_games {
+	font-family: "Horizon";
+	font-size: 34px;
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+}
+
+#table_links{
+	background-color: transparent;
+	border-radius: 10px;
+	margin-top: 60px;
+	border-collapse: separate;
+ 	border-spacing: 20px 15px;
+ }
+ 
+#link_n {
+	font-family: "Zelda";
+	font-size: 30px;
+}
+
+#link_s {
+	font-family: "Symbols";
+	font-size: 40px;
+}
+#link_line {
+ 	border-bottom: 4px transparent;
+ 	box-shadow: 0 0 30px 0 #3c6496;
+ 	border-radius: 10px;
+ } 
+ 
+#stats {
+	font-size: 15px;
+}
+ 
+ ul {
+ 	list-style-type: none;
+ }
+ 
+#li_s {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	font-size: 20px;
+	font-family: "Poor";
+	color: #383838;
+	text-shadow: 3px 3px 3px #A0A0A0;
+}
+ 
+ #table_stats {
+ 	margin-left: 14%;
+ 	margin-right: 20%;
+}
+ 
+ a {	
+ 	text-decoration: none;
+ 	color: white;
+	text-shadow: 3px 3px 3px #000000;
+ }
+ 
+#trailer {
+	max-width: 100%;
+
+}
+
+#title_trailer {
+	text-align: center;
+	margin-top: 15%;
+	font-family: "Horizon";
+	font-size: 30px;
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+}
+
+#title_synopsis {
+	text-align: center;
+	margin-top: 15%;
+	font-family: "Horizon";
+	font-size: 30px;
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+}
+
+#synopsis {
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-family: "Californian FB";
+	color: #383838;
+	text-shadow: 3px 3px 3px #A0A0A0;
+}
+
+td, tr {
+	padding: 10px;
+}
+
+table {
+	margin: 0 auto;
+    text-align: center;
+    
+}
+img {
+	max-width: 60%;
+	height: auto;
+}
+
