@@ -24,7 +24,7 @@ import aiss.model.igdb.Genre;
 @Path("/games")
 public class IGDBResource {
 	
-	private static final String IGDB_API_KEY = "0a4848dddc9b4adb3943d0db7d503eaf";
+	private static final String IGDB_API_KEY = "19a1e9987cee5927fc4c6e7354743cc2";
 	private static final Logger log = Logger.getLogger(IGDBResource.class.getName());
 	public static IGDBResource _instance=null;
 
@@ -80,14 +80,13 @@ public class IGDBResource {
 		ClientResource cr = new ClientResource(uri);
 		addHeader(cr, "user-key", IGDB_API_KEY);
 		Genre[] igdbClass = cr.get(Genre[].class);
-		log.log(Level.INFO, "Game vale " + igdbClass);
 	    
 		for (int i = 0; i < igdbClass.length; i++) {
 			listGen.add(igdbClass[i]);
 		}
 		List<Integer> li = listGen.get(0).getGames();
 		Integer a = ThreadLocalRandom.current().nextInt(5, li.size()-10);
-		Integer b = a + 3;
+		Integer b = a + 8;
 		return li.subList(li.size()-b, li.size()-a);
 	}
   
