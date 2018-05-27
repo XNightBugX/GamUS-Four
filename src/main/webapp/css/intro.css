@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Horizon'; /*a name to be used later*/
+    src: url('/fonts/horizon.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Candara'; /*a name to be used later*/
+    src: url('/fonts/Candara.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Benguiat'; /*a name to be used later*/
+    src: url('/fonts/Benguiat Book.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Super Mario'; /*a name to be used later*/
+    src: url('/fonts/Super Mario.ttf'); /*URL to font*/
+}
+
+body {
+	text-align: center;
+	background-image: url(/images/mario.png);
+	margin-top: 100px;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#descripcion {
+	font-family: "Candara";
+	font-size: 20px;
+}
+
+#integrantes {
+	font-family: "Super Mario";
+	font-size: 35px;
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+}
+
+#tabla {
+	width: 100%;
+}
+
+td {
+	padding: 20px;
+}
+
+#alejandro {
+	font-family: "Benguiat";
+	font-size: 20px;
+	color: #424242;
+}
+
+#aledes {
+	font-family: "Candara";
+	font-size: 15px;
+	color: #424242;
+	text-shadow: 3px 3px 3px #d3d3d3;
+}
+
+#ezequiel {
+	font-family: "Benguiat";
+	font-size: 20px;
+	color: #424242;
+}
+
+#ezeqdes {
+	font-family: "Candara";
+	font-size: 15px;
+	color: #424242;
+	text-shadow: 3px 3px 3px #d3d3d3;
+}
+
+#belen {
+	font-family: "Benguiat";
+	font-size: 20px;
+	color: #424242;
+}
+
+#beldes {
+	font-family: "Candara";
+	font-size: 15px;
+	color: #424242;
+	text-shadow: 3px 3px 3px #d3d3d3;
+}
+
+#listaintegrantes {
+	font-family: "Verdana", Sans, serif;
+	list-style-type: square;
+	text-align: center;
+	display: inline-block;
+}
+
+#titulo {
+	font-family: "Horizon";
+	font-size: 60px;
+	color: #08008A;
+	text-shadow: 3px 3px 3px #61bdc4;
+}
