@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>GamUS Four</title>
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="icon" href="./images/favicon.png" type="image/png"
+	sizes="16x16">
+<style>
+		@media only screen and (max-width: 800px) {
+   html {
+	background-image: url(/images/indexback.png);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1600px;
+}
+	}
+</style>
+</head>
+<body>
+	<div id="cuerpo">
+	<div id="logo">
+		<img id="logo" src="./images/logogamus.png" width="300px">
+	</div>
+	<form id="formulario1" action="/search" method="post">
+		<p>
+			<input type="text" name="searchQuery" required id="entrada">
+		</p>
+		<p>
+			<input type="submit" value="Search" id="botonbuscar">
+		</p>
+	</form>
+	</div>
+	<div id="link_div">
+		<p>
+			<a target="_blank" id="link" href="/aboutus.jsp">About  us</a>
+		</p>
+		<p>
+			<a target="_blank" id="link" href="https://app.swaggerhub.com/apis/GamUS-Four/gamus/2.0.0">Api documentation</a>
+		</p>
+	</div>
+</body>
+</html>
