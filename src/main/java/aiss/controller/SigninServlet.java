@@ -45,7 +45,7 @@ public class SigninServlet extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Twitter twitter = new TwitterFactory().getInstance();       
+    	Twitter twitter = new TwitterFactory().getInstance(); 
         request.getSession().setAttribute("twitter", twitter);
         try {
             StringBuffer callbackURL = request.getRequestURL();

@@ -34,9 +34,9 @@
 			<td><img id="foto" src="./images/perry.png" width="200px"></td>
 		</tr>
 		<tr>
-			<td id="aledes">2º Software Engineering Student. He loves all about Android.</td>
-			<td id="beldes">2º Software Engineering Student. She admires Japanese animation.</td>
-			<td id="ezeqdes">2º Software Engineering Student. He is a videogame's lover.</td>
+			<td id="aledes">3º Software Engineering Student. He loves all about Android.</td>
+			<td id="beldes">3º Software Engineering Student. She admires Japanese animation.</td>
+			<td id="ezeqdes">3º Software Engineering Student. He is a videogame's lover.</td>
 		</tr>
 	</table>
 	<div>

@@ -5,7 +5,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2</version>
 
 	<groupId>aiss</groupId>
 	<artifactId>GamUS-Four</artifactId>
@@ -20,7 +20,7 @@
 	</repositories>
 
 	<properties>
-		<appengine.version>1.9.63</appengine.version>	<!-- AppEngine version -->
+		<appengine.version>1.9.71</appengine.version>	<!-- AppEngine version -->
 		<servlet.version>2.5</servlet.version>	<!-- Servlet version -->
 		<jslt.version>1.2</jslt.version>	<!-- JSLT version -->
 		<restlet.version>2.3.7</restlet.version> <!-- Restlet version -->
@@ -140,17 +140,15 @@
 
 		<!-- Twitter4j -->
 		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-core</artifactId>
-			<version>[4.0,)</version>
+    		<groupId>org.twitter4j</groupId>
+    		<artifactId>twitter4j-core</artifactId>
+    		<version>4.0.7</version>
 		</dependency>
 	</dependencies>
 
 	<build>
-
 		<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
 		<plugins>
-
 			<!-- Maven AppEngine plugin -->
 			<plugin>
 				<groupId>com.google.appengine</groupId>
@@ -212,7 +210,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.9</version>
+				<version>0.8.3</version>
 				<executions>
 					<execution>
 						<goals>

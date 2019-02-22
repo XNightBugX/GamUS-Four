@@ -105,12 +105,16 @@ public class Game {
 					res.add("PlayStation 2");
 				} else if (plat == 9) {
 					res.add("PlayStation 3");
+				}else if(plat==11) {
+					res.add("XBox");
 				} else if (plat == 12) {
 					res.add("XBox 360");
 				} else if (plat == 14) {
 					res.add("Mac");
 				} else if (plat == 20) {
 					res.add("Nintendo DS");
+				}else if(plat==21) {
+					res.add("GameCube");
 				} else if (plat == 24) {
 					res.add("Game Boy Advance");
 				} else if (plat == 33) {
@@ -119,6 +123,8 @@ public class Game {
 					res.add("Android");
 				} else if (plat == 37) {
 					res.add("Nintendo 3DS");
+				}else if(plat==38) {
+					res.add("PlayStation Portable");
 				} else if (plat == 39) {
 					res.add("iOS");
 				} else if (plat == 41) {
@@ -131,6 +137,10 @@ public class Game {
 					res.add("PlayStation 4");
 				} else if (plat == 49) {
 					res.add("XBox One");
+				} else if( plat == 72) {
+					res.add("Ouya");
+				} else if (plat == 73) {
+					res.add("BlackBerry OS");
 				} else if (plat == 74) {
 					res.add("Windows Phone");
 				} else if(plat == 92) {
